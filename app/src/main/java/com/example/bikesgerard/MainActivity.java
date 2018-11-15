@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         btnFAB = findViewById(R.id.FAB);
-
+//
         MyAdapter myAdapter = new MyAdapter();
         recyclerView.setAdapter(MyAdapter);
 
