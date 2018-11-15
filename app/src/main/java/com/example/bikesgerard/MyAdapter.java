@@ -11,20 +11,22 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
+    List<Bicicleta> list;
+
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View itemPoem = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_itembicicleta, viewGroup, false);
-        return new MyViewHolder(itemPoem);
+        View itemBicicleta = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_bicicleta, viewGroup, false);
+        return new MyViewHolder(itemBicicleta);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
 
         Bicicleta bicicleta = list.get(i);
-        myViewHolder.BicicletaAuthor.setText(bicicleta.marca);
-        myViewHolder.BicicletaAuthor.setText(bicicleta.precio);
+        myViewHolder.bicicletaMarca.setText(bicicleta.marca);
+        myViewHolder.bicicletaPrecio.setText(bicicleta.precio);
 
     }
 
@@ -33,20 +35,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return (list != null ? list.size() : 0);
     }
 
+    public void setList(List<Bicicleta> bicilist){
+        list = bicilist;
+    }
+
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView BicicletaTitle;
-        private TextView BicicletaAuthor;
+        private TextView bicicletaMarca;
+        private TextView bicicletaPrecio;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-             BicicletaTitle = itemView.findViewById(R.id.bici_title);
-             BicicletaAuthor = itemView.findViewById(R.id.bici_author);
-
+             bicicletaMarca = itemView.findViewById(R.id.bici_marca);
+             bicicletaPrecio = itemView.findViewById(R.id.bici_precio);
         }
     }
-        List<Bicicleta> list;
-
-    }
+}
 
 

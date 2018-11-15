@@ -9,14 +9,14 @@
         android:orientation="vertical"
         android:padding="8dp">
         <TextView
-            android:id="@+id/bici_title"
+            android:id="@+id/bici_marca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="cursive"
             android:textSize="26sp"
             android:textStyle="bold" />
         <TextView
-            android:id="@+id/bici_author"
+            android:id="@+id/bici_precio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="cursive"
